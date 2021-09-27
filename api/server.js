@@ -28,7 +28,10 @@ server.get('/api/dogs', async (req, res) => {
     res.json(dogs)
   } catch (err) {
     // handle the error here (so app doesn't crash)
-    res.status()
+    res.status(500).json({
+      message: err.message,
+      customMessage: 'something horrible happened while getting dogs'
+    })
   }
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
