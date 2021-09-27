@@ -24,6 +24,7 @@ server.get('/api/dogs', async (req, res) => {
     // anything crashes here...
     // take a trip to the database using a helper function
     const dogs = await Dog.findAll() // this funct returns promise!!!
+    console.log(dogs)
   } catch (err) {
     // handle the error here (so app doesn't crash)
   }
