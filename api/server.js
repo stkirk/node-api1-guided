@@ -26,7 +26,7 @@ server.get('/api/dogs/:id', async (req, res) => {
     console.log(dog)
     if (!dog) {
       res.status(404).json({
-        message: ``
+        message: `dog with id ${id} does not exist!`
       })
     }
     res.status(200).json(dog)
