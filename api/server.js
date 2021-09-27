@@ -21,7 +21,6 @@ server.get('/', (req, res) => {
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', async (req, res) => {
   try {
-    // anything crashes here...
     // take a trip to the database using a helper function
     const dogs = await Dog.findAll() // this funct returns promise!!!
     res.status(200).json(dogs) // without this client is left hanging!
