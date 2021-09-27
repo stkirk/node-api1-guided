@@ -81,8 +81,9 @@ server.put('/api/dogs/:id', async (req, res) => {
       })
     } else {
       const updatedDog = await Dog.update(id, { name, weight})
-      console.log(updatedDog)
-      res.json(updatedDog)
+      if (!updatedDog) {
+        res.status(404).json
+      }
     }
   } catch (err) {
     res.status(500).json({
@@ -93,7 +94,7 @@ server.put('/api/dogs/:id', async (req, res) => {
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', async (req, res) => {
-  
+  try
 })
 
 // EXPOSING THE SERVER TO OTHER MODULES
