@@ -98,7 +98,14 @@ server.put('/api/dogs/:id', async (req, res) => {
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', async (req, res) => {
-  try
+  try {
+
+  } catch (err) {
+    res.status(500).json({
+      message: err.message,
+      customMessage: 'something horrible happened while deleting dog'
+    })
+  }
 })
 
 // EXPOSING THE SERVER TO OTHER MODULES
