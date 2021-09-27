@@ -20,7 +20,9 @@ server.get('/', (req, res) => {
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', async (req, res) => {
   try {
-    const dog = await Dog.findById(req.params.)
+    const { id } = req.params
+    console.log(id)
+    const dog = await Dog.findById(req.params.id)
   } catch (err) {
     res.status(500).json({
       message: err.message,
