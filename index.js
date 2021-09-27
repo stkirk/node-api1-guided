@@ -1,5 +1,5 @@
 // import the server and start it
-const server = require('./api/server')
+const server = require('./badpath')
 
 console.log(`web46 rules!!!!!!!!`)
 console.log(process.env.LANG) // computer stuff
