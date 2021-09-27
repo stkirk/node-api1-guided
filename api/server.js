@@ -22,3 +22,4 @@ server.get('/', (req, res) => {
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
+module.exports = server // export default server
