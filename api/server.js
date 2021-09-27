@@ -73,6 +73,13 @@ server.post('/api/dogs', async (req, res) => {
 server.put('/api/dogs/:id', async (req, res) => {
   try {
     const { name, weight } = req.body
+    const { id } = req.params
+
+    if (!name || !weight) {
+      res.status(400).json({
+        message: 'supply name and weight to update dog'
+      })
+    } else {}
   } catch (err ) {
     res.status(500).json({
       message: err.message,
