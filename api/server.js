@@ -53,7 +53,7 @@ server.get('/api/dogs', async (req, res) => {
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', async (req, res) => {
   try {
-    
+    const { name, weight } = req.body
   } catch (err) {
     res.status(500).json({
       message: err.message,
