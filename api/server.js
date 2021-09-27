@@ -80,9 +80,10 @@ server.put('/api/dogs/:id', async (req, res) => {
         message: 'supply name and weight to update dog'
       })
     } else {
-      
+      const whatever = await Dog.update({ name, weight })
+      console.log(whatever)
     }
-  } catch (err ) {
+  } catch (err) {
     res.status(500).json({
       message: err.message,
       customMessage: 'something horrible happened while updating dog'
