@@ -22,7 +22,8 @@ server.get('/api/dogs/:id', async (req, res) => {
   try {
     const { id } = req.params
     console.log(id)
-    const dog = await Dog.findById(req.params.id)
+    const dog = await Dog.findById(id)
+    console.log(dog)
   } catch (err) {
     res.status(500).json({
       message: err.message,
