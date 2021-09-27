@@ -18,12 +18,12 @@ server.get('/', (req, res) => {
 })
 
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
+server.get('/api/dogs/:id')
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', async (req, res) => {
   try {
     // take a trip to the database using a helper function
     const dogs = await Dog.findAll() // this funct returns promise!!!
-    throw new Error('disaster')
     res.status(200).json(dogs) // without this client is left hanging!
   } catch (err) {
     // handle the error here (so app doesn't crash)
