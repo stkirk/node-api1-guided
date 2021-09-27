@@ -1,6 +1,7 @@
 // IMPORTS AT THE TOP
 const express = require('express') // import express from 'express'
 const Dog = require('./dog-model') // relative paths to import modules
+
 // INSTANCE OF EXPRESS APP
 const server = express()
 
@@ -21,6 +22,7 @@ server.get('/api/dogs', async (req, res) => {
   try {
     // anything crashes here...
     // take a trip to the database using a helper function
+    const dogs = Dog.findAll() // this funct returns promise!!!
   } catch (err) {
     // handle the error here (so app doesn't crash)
   }
