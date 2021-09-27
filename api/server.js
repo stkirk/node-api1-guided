@@ -58,6 +58,8 @@ server.post('/api/dogs', async (req, res) => {
       res.status(400).json({
         message: 'new dogs need name and weight'
       })
+    } else {
+      
     }
   } catch (err) {
     res.status(500).json({
