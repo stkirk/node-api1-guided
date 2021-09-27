@@ -11,6 +11,7 @@ server.use(express.json()) // teaches express to parse request bodies as JSON
 
 // [GET] / (Hello World endpoint)
 server.get('/', (req, res) => {
+  console.log(`this is a ${req.method} request`)
   res.json({ message: 'hellow, world! Web 46 rulez!' })
 })
 
