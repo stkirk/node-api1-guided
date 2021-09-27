@@ -1,6 +1,6 @@
 // IMPORTS AT THE TOP
 const express = require('express') // import express from 'express'
-
+const Dog = require('./dog-model') // relative paths to import modules
 // INSTANCE OF EXPRESS APP
 const server = express()
 
