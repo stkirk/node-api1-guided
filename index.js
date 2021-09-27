@@ -7,4 +7,6 @@ console.log(process.argv[2]) // first arg from command line
 
 const port = 5000
 
-
+server.listen(port, () => {
+  console.log(`listening on port ${port}`)
+})
