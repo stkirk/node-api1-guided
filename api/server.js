@@ -21,9 +21,7 @@ server.get('/', (req, res) => {
 server.get('/api/dogs/:id', async (req, res) => {
   try {
     const { id } = req.params
-    console.log(id)
     const dog = await Dog.findById(id)
-    console.log(dog)
     if (!dog) {
       res.status(404).json({
         message: `dog with id ${id} does not exist!`
