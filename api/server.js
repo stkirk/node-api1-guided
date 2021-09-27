@@ -11,7 +11,7 @@ server.use(express.json()) // teaches express to parse request bodies as JSON
 
 // [GET] / (Hello World endpoint)
 server.get('/', (req, res) => {
-  
+  res.json({ message: 'hellow, world! Web 46 rulez!' })
 })
 
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
