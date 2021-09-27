@@ -10,7 +10,9 @@ server.use(express.json()) // teaches express to parse request bodies as JSON
 // ENDPOINTS
 
 // [GET] / (Hello World endpoint)
-server.get('/', (req, res) => {})
+server.get('/', (req, res) => {
+  
+})
 
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
