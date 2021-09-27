@@ -19,11 +19,11 @@ server.get('/', (req, res) => {
 
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
-server.get('/api/dogs', async (req, res) => {
+server.get('/api/dogs', (req, res) => {
   try {
     // anything crashes here...
     // take a trip to the database using a helper function
-    const dogs = Dog.findAll() // this funct returns promise!!!
+    const dogs = await Dog.findAll() // this funct returns promise!!!
     console.log(dogs)
     res.json(dogs)
   } catch (err) {
