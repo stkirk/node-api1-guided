@@ -79,7 +79,9 @@ server.put('/api/dogs/:id', async (req, res) => {
       res.status(400).json({
         message: 'supply name and weight to update dog'
       })
-    } else {}
+    } else {
+      
+    }
   } catch (err ) {
     res.status(500).json({
       message: err.message,
