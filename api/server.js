@@ -103,8 +103,10 @@ server.delete('/api/dogs/:id', async (req, res) => {
     console.log(deletedDog)
     if (!deletedDog) {
       res.status(404).json({
-        message: ``
+        message: `dog with id ${req.params.id} does not exist`
       })
+    } else {
+      res.json(deletedDog)
     }
   } catch (err) {
     res.status(500).json({
