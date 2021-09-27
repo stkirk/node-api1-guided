@@ -80,8 +80,9 @@ server.put('/api/dogs/:id', async (req, res) => {
         message: 'supply name and weight to update dog'
       })
     } else {
-      const whatever = await Dog.update(id, { name, weight})
-      console.log(whatever)
+      const updatedDog = await Dog.update(id, { name, weight})
+      console.log(updatedDog)
+      res.json(updatedDog)
     }
   } catch (err) {
     res.status(500).json({
