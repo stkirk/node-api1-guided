@@ -4,7 +4,7 @@ function getId() {
   return nanoid().slice(0, 5)
 }
 
-let dogs = [
+let dogs = [ // imitating a sql table called 'dogs'
   { id: getId(), name: 'Captain', weight: 25 },
   { id: getId(), name: 'Doggo', weight: 13 },
 ]
