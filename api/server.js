@@ -60,7 +60,6 @@ server.post('/api/dogs', async (req, res) => {
       })
     } else {
       const newDog = await Dog.create({ name, weight })
-      console.log(newDog)
       res.status(200).json(newDog)
     }
   } catch (err) {
