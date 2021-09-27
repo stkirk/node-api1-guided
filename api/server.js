@@ -100,7 +100,6 @@ server.put('/api/dogs/:id', async (req, res) => {
 server.delete('/api/dogs/:id', async (req, res) => {
   try {
     const deletedDog = await Dog.delete(req.params.id)
-    console.log(deletedDog)
     if (!deletedDog) {
       res.status(404).json({
         message: `dog with id ${req.params.id} does not exist`
