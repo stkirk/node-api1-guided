@@ -54,6 +54,7 @@ server.get('/api/dogs', async (req, res) => {
 server.post('/api/dogs', async (req, res) => {
   try {
     const { name, weight } = req.body
+    console.log(name, weight)
   } catch (err) {
     res.status(500).json({
       message: err.message,
