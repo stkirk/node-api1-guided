@@ -5,11 +5,13 @@ const express = require('express') // import express from 'express'
 const server = express()
 
 // GLOBAL MIDDLEWARE
-server.use()
+server.use(express.json()) // teaches express to parse request bodies as JSON
 
 // ENDPOINTS
 
 // [GET] / (Hello World endpoint)
+server.get
+
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
