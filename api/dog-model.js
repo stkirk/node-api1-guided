@@ -12,7 +12,8 @@ let dogs = [ // imitating a sql table called 'dogs'
 module.exports = {
   async findAll() {
     // SELECT * FROM dogs;
-    return Promise.reject('ARGHGHHHHHHHHH!!')
+    const err = new Error('disaster!!!')
+    return err
     return dogs
   },
 
