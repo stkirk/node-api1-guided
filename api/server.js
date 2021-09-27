@@ -5,6 +5,7 @@ const express = require('express') // import express from 'express'
 const server = express()
 
 // GLOBAL MIDDLEWARE
+server.use()
 
 // ENDPOINTS
 
