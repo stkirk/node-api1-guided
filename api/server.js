@@ -113,7 +113,7 @@ server.delete("/api/dogs/:id", async (req, res) => {
   }
 });
 
-// STEP 4 - [GET] / (Hello World endpoint)
+// STEP 5 - [GET] / (Hello World endpoint)
 // * denotes a response to any request to the server, usually used as last resort for a response to a request to an endpoint that doesn't exist - 404 status
 // use means any type of request
 server.use("*", (req, res) => {
@@ -122,5 +122,5 @@ server.use("*", (req, res) => {
   res.status(404).json({ message: "404 Resource Not Found" });
 });
 
-// STEP 5 - EXPOSING THE SERVER TO OTHER MODULES
+// STEP 4 - EXPOSING THE SERVER TO OTHER MODULES
 module.exports = server;
